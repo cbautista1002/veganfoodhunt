@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no" />
+    <title>Vegan Food Hunt</title>
+    <link rel="stylesheet" href="vfh_css/vfh_style.css">
+    <link rel="stylesheet" href="bootstrap-3.0.0-dist/dist/css/bootstrap.css">
+  </head>
+
+  <body onload="initialize()">
+
+<!-- Container DIV -->
+    <div class="container-fluid", id="top_container">
+
+    <div class="row" id="main_logo_div">
+      <div class="col-md-12 text-center">
+        <img class="main_logo_position" src="images\vfh_logo_4.png" alt="VeganFoodHunt"/>
+      </div>
+    </div>
+
+    <div class="row" id="map_group">
+      <div class="col-md-12" id="map-canvas"></div>
+      <div class="col-md-3 well text-center" id="list_overlay"></div>
+    </div>
+
+    <div class="row" id="address_getting">
+      <div class="col-md-6 col-sm-6 col-xs-6 text-center" id="location_button_div">
+        <button class="btn btn-default" type="button" onclick="getLocationUsingNav()">
+          <span class="glyphicon glyphicon-map-marker"></span> Use Current Location
+        </button>
+      </div>
+      <!--<div class="col-md-2 col-sm-2 hidden-xs text-center" id="or_div">or</div>-->
+      <div class="col-md-6 col-sm-6 col-xs-6 text-center" id="address_input_div">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 col-xs-12">
+          <input type="text" class="form-control text-center" id="user_location_input" placeholder="Search Location"
+            onkeydown="if (event.keyCode == 13) codeAddress()">
+          </input>
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+
+
+
+    <div class="row" id="form_div_hdr">
+      <div class="col-md-12 text-center">
+        <h1>suggest a place</h1>
+      </div>
+      <div class="col-md-3"></div>
+      <div class="col-md-6 text-center" id="form_div_desc">
+        <p>We love hearing about new places! Let us know about a restaurant, cafe,
+           lounge, bar or any other eatery that serves a vegan dish. All we need is
+           the restaurant's name, as accurate an address as possible and finally
+           what dish you discovered at this place.</p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row" id="form_div_body">
+      <div class="col-md-4 col-sm-3"></div>
+      <div class="col-md-4 col-sm-6">
+
+        <form class="form-horizontal" action="javascript:storeSuggestion();" method="Post" role="form">
+
+          <div class="form-group">
+            <label class="col-lg-4 control-label" for="inputRestaurant">Restaurant Name</label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" id="inputRestaurant" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-4 control-label" for="inputAddress">Restaurant Address</label>
+            <div class="col-lg-8">
+              <input type="text" class="form-control" id="inputAddress" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-lg-4 control-label" for="inputInfo">Restaurant Info</label>
+            <div class="col-lg-8">
+              <textarea rows="4" id="inputInfo" class="form-control" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-offset-4 col-lg-8">
+              <button class="btn btn-default" type="submit">
+                <!--<i class="glyphicon-ok"></i>--> Submit
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="col-md-4 col-sm-3"></div>
+    </div>
+
+
+
+    <div class="row" id="about_div_hdr">
+      <div class="col-md-12 text-center">
+        <h1>about</h1>
+      </div>
+    </div>
+    <div class="row" id="about_div_body">
+      <div class="col-md-2"></div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <h3>why the world needs this site</h3>
+        <p>Let's be honest. Finding vegan food can sometimes be a little
+           challenging. You're walking down the street and all you see are fast
+           food chains followed by a steakhouses - not ideal places to find great
+           vegan food. Then there are restaurants that are not solely vegetarian
+           or vegan, yet they offer great vegan options. We're here to help! We've
+           scoured the streets to find sources of delicious vegan food. And
+           they're all listed here!</p>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <h3>what gets listed here</h3>
+        <p>Defining dietary restrictions is not always an exact science. Some vegans
+           are a little more flexible than others. The listings on this site meet the
+           following requirement: absolutely no animal ingredients in the food (no milk,
+           eggs, butter, fish oil, etc). The listings here do not necessarily suggest
+           the following: the suggested dishes may be prepared on the same surfaces as
+           other non-vegan food (eg: fried foods may be fried in the same fryer as
+           fried chicken). Please take this into consideration when ordering this food
+           items. Nontheless, this site should guide you in the right direction.</p>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+
+
+    <div class="row" id="footer">
+      <div class="col-md-12 text-center">
+        <h6>veganfoodhunt</h6>
+      </div>
+    </div>
+
+
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel" class="text-center">Thanks!</h3>
+          </div>
+          <div class="modal-body" id="modal_body_div">
+            <div id="modal_body_contents"></div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    </div> <!-- Container  -->
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwkdun_G5Y_G0E8AF8H3-cvfuvcSVVIUE&sensor=true&libraries=geometry"></script>
+    <script src="vfh_js_scripts/vfh_js.js"></script>
+    <script src="bootstrap-3.0.0-dist/dist/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

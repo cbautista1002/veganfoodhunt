@@ -1,0 +1,228 @@
+
+/* Bootstrap CSS Map Fix -- Not needed for Bootstrap 3.x*/
+/*#map-canvas img { 
+  max-width: none;
+}
+*/
+
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+html{
+  height: 100%;
+}
+body{
+  background-color: #CCFF99 !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#top_container{
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/*
+#main_logo_div, #map_group, #address_getting, #about_div_hdr,
+#about_div_body, #form_div_hdr, #form_div_body, #footer {
+  border-left: 1px solid red !important;
+  border-right: 1px solid red !important;
+  -webkit-box-shadow: 4px 0px 25px 0px rgba(46,27,46,1);
+  -moz-box-shadow: 4px 0px 25px 0px rgba(46,27,46,1);
+  box-shadow: 4px 0px 25px 0px rgba(46,27,46,1);
+  box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 15px -4px rgba(31, 73, 125, 0.8);
+}
+*/
+/*
+#map_group{
+  box-shadow: 5px 0px 5px 0px black, 0px 5px 5px 0px black, 12px 0px 15px -4px #CCFF99, -12px 0px 15px -4px #CCFF99;
+}
+*/
+
+#main_logo_div{
+  background-color:#F5D549;
+  border-width: 2px;
+  border-color: #CFB43E;
+  border-bottom-style: solid;
+  width: 100%;
+}
+IMG.main_logo_position{
+  display: block;
+  height: 60px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+
+#map_group{
+  height: 75%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#map-canvas{
+  height: 100%;
+  width: 100%;
+}
+
+/* http://getbootstrap.com/css/#grid-media-queries */
+/* Extra small devices (phones, less than 768px)   */
+/* Small devices (tablets, 768px and up)           */
+/* Medium devices (desktops, 992px and up)         */
+/* Large devices (large desktops, 1200px and up)   */
+
+/* http://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load*/
+/* Small devices (tablets 768 to 991) */
+@media (min-width: 768px){
+  #list_overlay{
+  padding-right: 0px;
+  padding-left: 0px;
+  top: 2%;
+  left: 2%;
+  width: 30%;
+  position: absolute;
+  display: none;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+  }
+  #carousel{
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px){
+  #list_overlay{
+    display: none !important;
+  }
+}
+
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Force the height until content is ready to fill
+ * Position is already set by default to relative
+*/
+#carousel{
+  height: 250px;
+}
+#carousel_arrows{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+/* Change the colors of the carousel indicators to
+ * work for a white/light background color.
+*/
+.carousel-indicators li{
+  border-color: #000000 !important;
+}
+.carousel-indicators .active{
+  background-color: #F38A05 !important;
+}
+#carousel_text_link{
+  font-size: 0.8em;
+}
+
+
+#address_getting{
+  background-color:#E6E6E6;
+  border-width: 2px;
+  border-color: #B5B3B3;
+  border-top-style: solid;
+}
+#location_button_div{}
+#or_div{
+  border-width: 1px;
+  border-color: #C9C7C7;
+  border-left-style: solid;
+  border-right-style: solid;
+  height: 100%;
+  position: relative;
+}
+#address_input_div{
+  min-height: 100%;
+}
+
+
+#about_div_hdr{
+  background-color:#EA9BFA;
+  border-width: 2px;
+  border-color: #E468FC;
+  border-top-style: solid;
+}
+#about_div_body{
+  background-color:#EA9BFA;
+  overflow: auto !important;
+  padding-bottom: 30px;
+}
+
+
+#form_div_hdr{
+  background-color: #7E9DFF;
+  border-width: 2px;
+  border-color: #51649E;
+  border-top-style: solid;
+}
+#form_div_desc{
+}
+#form_div_body{
+  background-color: #7E9DFF;
+}
+
+
+#modal_body_div h4, p {
+  display: inline;
+}
+
+
+#footer{
+  height: 80px;
+  background-color:#85BD80;
+  border-width: 2px;
+  border-color: #628F5E;
+  border-top-style: solid;
+}
+
