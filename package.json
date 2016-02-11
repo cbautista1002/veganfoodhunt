@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "cd test && jasmine && cd ..",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dockerbuild": "docker build -t vfh:latest .",
+    "dockerrun": "docker run -P -d vfh:latest",
+    "docker": "npm run dockerbuild && docker images && npm run dockerrun"
   },
   "repository": {
     "type": "git",
