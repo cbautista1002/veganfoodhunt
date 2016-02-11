@@ -1,0 +1,23 @@
+{
+  "name": "veganfoodhunt",
+  "version": "0.0.1",
+  "description": "Find vegan food",
+  "main": "server.js",
+  "scripts": {
+    "test": "true",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbautista1002/veganfoodhunt.git"
+  },
+  "author": "Carlos Bautista",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cbautista1002/veganfoodhunt/issues"
+  },
+  "homepage": "https://github.com/cbautista1002/veganfoodhunt#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
