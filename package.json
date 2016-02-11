@@ -19,5 +19,8 @@
   "homepage": "https://github.com/cbautista1002/veganfoodhunt#readme",
   "dependencies": {
     "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1"
   }
 }
