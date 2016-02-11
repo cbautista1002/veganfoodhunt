@@ -1,14 +1,14 @@
 'use strict';
 
 const express = require('express');
+const app = express();
+const path = require('path');
 
-// Constants
 const PORT = 3000;
 
-// App
-const app = express();
 app.get('/', function (req, res) {
-  res.send('Hello world\n');
+  // res.send('Hello world\n');
+  res.sendFile(path.join(__dirname + '/app/index.html'));
 });
 
 app.listen(PORT);
