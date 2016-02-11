@@ -4,7 +4,7 @@
   "description": "Find vegan food",
   "main": "server.js",
   "scripts": {
-    "test": "true",
+    "test": "cd test && jasmine && cd ..",
     "start": "node server.js"
   },
   "repository": {
