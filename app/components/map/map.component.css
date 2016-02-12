@@ -1,0 +1,12 @@
+#map_group{
+  height: 75%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#map-canvas{
+  height: 100%;
+  width: 100%;
+}
