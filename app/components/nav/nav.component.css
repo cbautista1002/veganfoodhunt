@@ -1,0 +1,21 @@
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+#main_logo_div{
+  background-color:#F5D549;
+  border-width: 2px;
+  border-color: #CFB43E;
+  border-bottom-style: solid;
+  width: 100%;
+}
+
+IMG.main_logo_position{
+  display: block;
+  height: 60px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}

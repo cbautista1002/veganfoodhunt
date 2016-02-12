@@ -1,14 +1,9 @@
 
 /* Bootstrap CSS Map Fix -- Not needed for Bootstrap 3.x*/
-/*#map-canvas img { 
+/*#map-canvas img {
   max-width: none;
 }
 */
-
-.row {
-  margin-right: 0px !important;
-  margin-left: 0px !important;
-}
 
 html{
   height: 100%;
@@ -18,12 +13,6 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-#top_container{
-  height: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 /*
@@ -42,36 +31,6 @@ body{
   box-shadow: 5px 0px 5px 0px black, 0px 5px 5px 0px black, 12px 0px 15px -4px #CCFF99, -12px 0px 15px -4px #CCFF99;
 }
 */
-
-#main_logo_div{
-  background-color:#F5D549;
-  border-width: 2px;
-  border-color: #CFB43E;
-  border-bottom-style: solid;
-  width: 100%;
-}
-IMG.main_logo_position{
-  display: block;
-  height: 60px;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-}
-
-
-#map_group{
-  height: 75%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
-#map-canvas{
-  height: 100%;
-  width: 100%;
-}
 
 /* http://getbootstrap.com/css/#grid-media-queries */
 /* Extra small devices (phones, less than 768px)   */
