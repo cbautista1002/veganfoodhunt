@@ -7,7 +7,7 @@ import {ANGULAR2_GOOGLE_MAPS_DIRECTIVES} from 'angular2-google-maps/core';
     selector: 'map-view',
     directives: [ANGULAR2_GOOGLE_MAPS_DIRECTIVES],
     templateUrl: 'app/components/map/map.component.html',
-    styleUrls: ['app/bootstrap.css', 'app/components/map/map.component.css']
+    styleUrls: ['app/components/map/map.component.css']
 })
 export class MapComponent {
 

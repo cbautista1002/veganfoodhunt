@@ -6,6 +6,6 @@ import {MapComponent} from './components/map/map.component';
     selector: 'my-app',
     directives: [NavComponent, MapComponent],
     templateUrl: 'app/app.html',
-    styleUrls: ['app/bootstrap.css', 'app/app.css']
+    styleUrls: ['app/app.css']
 })
 export class AppComponent { }
