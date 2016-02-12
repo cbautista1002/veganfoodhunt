@@ -6,7 +6,7 @@
   position: relative;
 }
 
-#map-canvas{
+.sebm-google-map-container{
   height: 100%;
   width: 100%;
 }
