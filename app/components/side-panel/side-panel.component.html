@@ -1,0 +1,22 @@
+<div class="row">
+
+  <div class="col-lg-12" id="near-me-wrapper">
+
+    <button type="button" class="btn btn-block btn-success" id="near-me-btn" (click)="alert('sdf')">
+      Search Near Me!
+    </button>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="eatery-box" *ngFor="#eatery of eateryList">
+          <div>{{eatery.name}}</div>
+          <div>{{eatery.desc}}</div>
+          <div>{{eatery.lat}}, {{eatery.lng}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+

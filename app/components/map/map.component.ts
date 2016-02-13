@@ -11,13 +11,11 @@ import {ANGULAR2_GOOGLE_MAPS_DIRECTIVES} from 'angular2-google-maps/core';
 })
 export class MapComponent {
 
-  lat: number;
-  lng: number;
-  zoom: number;
+  lat: number = 40.781346;
+  lng: number = -73.966614;
+  zoom: number = 12;
 
   constructor(){
-    this.zoom = 12;
-    this.getLocation();
   }
 
   getLocation(){

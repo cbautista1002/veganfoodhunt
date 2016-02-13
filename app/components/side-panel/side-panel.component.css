@@ -1,0 +1,28 @@
+#near-me-wrapper{
+  text-align: center;
+  /*border: 1px black solid;*/
+  height: 75%;
+  overflow-y: auto;
+}
+
+#near-me-btn{
+  margin: 0 0 10px 0;
+}
+
+.eatery-box{
+  padding: 10px 3px 10px 3px;
+  border-top: 1px #CECECE solid;
+}
+.eatery-box:hover{
+  background-color: #F7F7F7;
+  cursor: pointer;
+}
+.eatery-box:last-of-type{
+  border-bottom: 1px #CECECE solid;
+}
+.eatery-box:nth-child(even){
+  background-color: #F7F7F7;
+}
+.eatery-box:nth-child(even):hover{
+  background-color: #FFFFFF;
+}

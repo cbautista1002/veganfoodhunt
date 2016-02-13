@@ -4,10 +4,11 @@
 }
 
 #main_logo_div{
-  background-color:#F5D549;
-  border-width: 2px;
-  border-color: #CFB43E;
-  border-bottom-style: solid;
+  /*background-color:#F5D549;*/
+  border-bottom: 1px #FFA500 solid;
+  /*border-width: 2px;*/
+  /*border-color: #CFB43E;*/
+  /*border-bottom-style: solid;*/
   width: 100%;
 }
 
